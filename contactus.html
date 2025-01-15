@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .contact {
+            color: white;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .grid41 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 50px;
+            text-align: center;
+        }
+
+        .text {
+            padding: 0px 20px;
+            width: 20vw;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .text1 {
+            padding: 0px 20px ;
+            width: 30vw;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .submit>button {
+            padding: 20px 50px;
+            background-color: red;
+            color: yellow;
+            border-radius: 10px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="contact">Contact Us</div>
+        <div class="grid41">
+            <div>
+                <input type="text" class="text" name="name" placeholder="Enter the name" required>
+            </div>
+            <div>
+                <input type="email" class="text" name="email" placeholder="Enter email id" required>
+            </div>
+            <div>
+                <input type="text" name="message" class="text1" placeholder="Enter Your Message"
+                        required>
+            </div>
+        </div>
+        <div class="submit">
+            <button>SUBMIT</button>
+        </div>
+    </footer>
+</body>
+
+</html>

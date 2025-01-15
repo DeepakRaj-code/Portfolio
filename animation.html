@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(9, 53, 53);
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: deepak 3s alternate 2s  ease-in-out forwards,
+                       deep 2s alternate 2s  forwards;
+        }
+        @keyframes deepak {
+            from{
+                background-color: blue;
+            }
+            to{
+                transform: translateX(1000px);
+                background-color: red;
+            }
+        }
+        @keyframes deep {
+            60%{
+                transform: rotate(40deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>

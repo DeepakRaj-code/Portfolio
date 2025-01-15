@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        .container {
+            background-color: wheat;
+            height: 97vh;
+            width: 99vw;
+            position: relative;
+        }
+
+        .ball1 {
+            background-color: palevioletred;
+            height: 50px;
+            width: 50px;
+            margin-top: 540px;
+            border-radius: 50%;
+            position: absolute;
+            animation: deepak1 5s 1s linear infinite,
+                deep1 1s 1s ease-out infinite alternate;
+
+        }
+
+        @keyframes deepak1 {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+                background-color: aqua;
+            }
+        }
+
+        @keyframes deep1 {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 50%;
+            }
+        }
+
+        .ball2 {
+            background-color: black;
+            height: 50px;
+            width: 50px;
+            margin-top: 540px;
+            border-radius: 50%;
+            position: absolute;
+            animation: deepak2 1s 1s linear infinite;
+
+
+        }
+
+        @keyframes deepak2 {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes deep2 {
+            from {
+                bottom: 10;
+            }
+
+            to {
+                bottom: 50%;
+            }
+        }
+
+        .ball3 {
+            background-color: purple;
+            height: 50px;
+            width: 50px;
+            margin-top: 540px;
+            border-radius: 50%;
+            position: absolute;
+            animation: deep3 1s 1s ease-out infinite alternate;
+        }
+
+        @keyframes deepak3 {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes deep3 {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 50%;
+            }
+        }
+
+        .ball4 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            margin-top: 540px;
+            border-radius: 50%;
+            position: absolute;
+            animation: deepak4 1.5s 1s linear infinite,
+                deep4 1s 1s ease-out infinite alternate;
+
+        }
+        @keyframes deepak4 {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+                background-color: darkblue;
+            }
+        }
+
+        @keyframes deep4 {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+            }
+        }
+
+        .ball5 {
+            background-color: yellow;
+            height: 50px;
+            width: 50px;
+            margin-top: 540px;
+            border-radius: 50%;
+            position: absolute;
+            animation: deep5 1s 1s ease-out infinite alternate;
+
+        }
+        @keyframes deepak5 {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes deep5 {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+                background-color: brown;
+            }
+        }
+
+        .ball6 {
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            animation: deepak6 5s 1s linear infinite,
+                deep6 1s 1s ease-out infinite alternate;
+
+        }
+        @keyframes deepak6 {
+            from {
+                left: 100%;
+            }
+
+            to {
+                left: 0%;
+                background-color: red;
+            }
+        }
+
+        @keyframes deep6 {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 50%;
+            }
+        }
+        .ball7 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-top: 660px;
+            position: absolute;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ball1"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+        <div class="ball4"></div>
+        <div class="ball5"></div>
+        <div class="ball6"></div>
+        <div class="ball7"></div>
+        <div class="ball8"></div>
+        <div class="ball9"></div>
+        <div class="ball10"></div>
+    </div>
+</body>
+
+</html>

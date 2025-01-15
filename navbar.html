@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+
+            padding: 30px;
+            display: flex;
+        }
+
+        header ul {
+            margin-left: 500px;
+            margin-top: 13px;
+        }
+
+        header ul li {
+            color: black;
+            display: inline;
+            list-style: none;
+        }
+
+        .ue {
+            height: 45px;
+            width: 45px;
+            border-radius: 4px;
+            background-color: black;
+            color: yellow;
+            margin-left: 200px;
+            margin-top: -2px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .ultra {
+            margin-left: 10px;
+            margin-top: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        main {
+
+            display: flex;
+        }
+
+        span {
+            font-family: sans-serif;
+        }
+
+        .download {
+            height: 30px;
+            width: 470px;
+            margin-left: 500px;
+            margin-top: 50px;
+            font-size: xx-large;
+        }
+
+        .small {
+            justify-content: center;
+            text-align: center;
+            font-size: medium;
+            width: 40vw;
+            margin-top: 40px;
+            margin-left: -60px;
+        }
+        .mac {
+            background-color: rgb(32, 177, 225);
+            padding: 10px;
+            margin-top: 40px;
+            font-size: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .second{
+            display: flex;
+            flex-direction: column;
+        }
+        .ue2 {
+            height: 45px;
+            width: 45px;
+            border-radius: 4px;
+            background-color: yellow;
+            color: black;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-style: italic;
+        }
+        .d{
+            margin-top: -30px;
+            margin-left: -350px;
+            font-size: large;
+        }
+        .chotu{
+            margin-left: -65px;
+            font-size: xx-small;
+            margin-top: -12px;
+        }
+        .green{
+            background-color: green;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .blue{
+            background-color: blue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+       
+        .item{
+            background-color: rgb(244, 242, 240);
+            font-size: medium;
+            margin-left: -300px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            margin-top: 50px;
+        }
+        .item-lang{
+            font-size: large;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 50px;
+            column-gap: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="ue">
+            <h2>UE</h2>
+        </div>
+        <div class="ultra">
+            <h3>UltraEdit</h3>
+            <h6>An Indera inc.Company</h6>
+        </div>
+        <ul>
+            <li><a href="/">Products</a></li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Resources</a></li>
+            <li><a href="/">About us</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+            <div class="download">
+                <span>Download <b>UltraEdit</b> for Windows</span>
+                <div class="small">
+                    <div class="version">Download and try UltraEdit before you buy it! This download includes the full
+                        Windows version of the text editor.</div>
+                    <button class="mac">DOWNLOAD MAC OR LINUX VERSION</button>
+                    <div class="ue2">
+                        <h2>UE</h2>
+                    </div>
+                    <div>
+                        <div class="d">Download UltraEdit </div>
+                        <div class="chotu">v2023.1(released 08/16/2023)|Hotfix</div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="item">
+                        <div class="item-lang">English</div>
+                        <button class="btn blue">Download 32-bit</button>
+                        <button class="btn green">Download 64-bit</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-lang">Japanese</div>
+                        <button class="btn blue">Download 32-bit</button>
+                        <button class="btn green">Download 64-bit</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-lang">Italy</div>
+                        <button class="btn blue">Download 32-bit</button>
+                        <button class="btn green">Download 64-bit</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-lang">England</div>
+                        <button class="btn blue">Download 32-bit</button>
+                        <button class="btn green">Download 64-bit</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-lang">Tamil</div>
+                        <button class="btn blue">Download 32-bit</button>
+                        <button class="btn green">Download 64-bit</button>
+                    </div>
+                    <div class="item">
+                        <div class="item-lang">Hindi</div>
+                        <button class="btn blue">Download 32-bit</button>
+                        <button class="btn green">Download 64-bit</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

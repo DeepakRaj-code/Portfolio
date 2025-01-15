@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumo Fhiro - Travel Booking</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        /* Title styling */
+        h1 {
+            color: #f7f9fc;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            width: 100%;
+        }
+
+        /* Form container styling */
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Label styling */
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #003580;
+            display: block;
+        }
+
+        /* Input field styling */
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease;
+            background-color: #f7f9fc;
+        }
+
+        /* Focused input fields have a blue border and shadow */
+        input:focus {
+            border-color: #0072ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 114, 255, 0.5);
+        }
+
+        /* Radio button container styling */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Radio button item styling */
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Submit button styling */
+        button {
+            background-color: #0071c2;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+            transform: translateY(-2px);
+        }
+
+        /* Total Payment display styling */
+        #totalPayment {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #27ae60;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Additional styles for responsive design */
+        @media (max-width: 600px) {
+            form {
+                padding: 20px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+
+    <script>
+        function calculatePayment() {
+            const memberCount = document.getElementById('members').value;
+            const days = document.getElementById('days').value;
+            const paymentPerMemberPerDay = 1000;
+            const totalPayment = memberCount * days * paymentPerMemberPerDay;
+
+            // Fix the syntax error here
+            document.getElementById('totalPayment').textContent = `Total Payment: ₹${totalPayment}`;
+            generateMemberFields(memberCount);
+        }
+
+        function generateMemberFields(count) {
+            const membersContainer = document.getElementById('memberNames');
+            membersContainer.innerHTML = ''; // Clear any previous fields
+            for (let i = 1; i <= count; i++) {
+                const memberDiv = document.createElement('div');
+                memberDiv.innerHTML = `
+                    <label for="member${i}">Member ${i} Name</label>
+                    <input id="member${i}" name="member${i}" type="text" placeholder="Enter Name of Member ${i}" required>
+
+                    <label for="photo${i}">Upload Photo for Member ${i}</label>
+                    <input id="photo${i}" name="photo${i}" type="file" accept="image/*" required>
+                `;
+                membersContainer.appendChild(memberDiv);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Ghumo Fhiro</h1>
+    <form action="pay.html" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="name">Enter Name</label>
+            <input id="name" type="text" placeholder="Enter Your Name" required>
+        </div>
+
+        <div>
+            <label for="phone">Enter Phone Number</label>
+            <input id="phone" type="tel" placeholder="Enter Your Phone Number" required>
+        </div>
+
+        <div>
+            <label for="email">Enter Email ID</label>
+            <input id="email" type="email" placeholder="Enter Your Email ID" required>
+        </div>
+
+        <div>
+            <label for="fromDestination">From Destination</label>
+            <input id="fromDestination" type="text" placeholder="From Destination" required>
+        </div>
+
+        <div>
+            <label for="toDestination">To Destination</label>
+            <input id="toDestination" type="text" placeholder="To Destination" required>
+        </div>
+
+        <div>
+            <label for="date">Date of Travelling</label>
+            <input id="date" type="date" required>
+        </div>
+
+        <div>
+            <label for="days">Number of Days</label>
+            <input id="days" type="number" placeholder="Number of Days in a Trip" required
+                onchange="calculatePayment()">
+        </div>
+
+        <div>
+            <label for="members">Total Members</label>
+            <input id="members" type="number" placeholder="Total Members" required onchange="calculatePayment()">
+        </div>
+
+        <div id="memberNames"></div> <!-- Dynamic member name and photo fields -->
+
+        <div class="radio-group">
+            <div class="radio-item">
+                <input id="roadways" type="radio" name="mode" value="roadways" required>
+                <label for="roadways">Roadways</label>
+            </div>
+
+            <div class="radio-item">
+                <input id="railways" type="radio" name="mode" value="railways" required>
+                <label for="railways">Railways</label>
+            </div>
+
+            <div class="radio-item">
+                <input id="airways" type="radio" name="mode" value="airways" required>
+                <label for="airways">Airways</label>
+            </div>
+
+            <div class="radio-item">
+                <input id="waterways" type="radio" name="mode" value="waterways" required>
+                <label for="waterways">Waterways</label>
+            </div>
+        </div>
+
+        <div>
+            <input id="terms" type="checkbox" required>
+            <label for="terms">I hereby accept the terms and conditions of Ghumo Fhiro</label>
+        </div>
+
+        <div>
+            <button type="submit">Confirm Booking</button>
+        </div>
+
+        <div id="totalPayment"></div> <!-- Display total payment -->
+    </form>
+</body>
+
+</html>

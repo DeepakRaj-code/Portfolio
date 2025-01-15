@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/aa9edac4-a0e6-4f12-896e-32c518daec62/web/IN-en-20241223-TRIFECTA-perspective_1502c512-be5f-4f14-b21a-e3d75fe159ab_large.jpg");
+    background-position: center center;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    opacity: 7;
+    width: 100vw;
+}
+
+.dark{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+}
+.head{
+    padding: 24px;
+}
+.image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 79vw;
+    margin: auto;
+    height: 35px;
+    
+}
+.english{
+    height: 35px;
+    width: 130px;
+    margin-top: 3px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+.option1{
+    background-color: white;
+    color: black;
+}
+.option2{
+    background-color: white;
+    color: black;
+}
+.signup{
+    background-color: red;
+    color: white;
+    height: 35px;
+    width: 75px;
+    margin-top: 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 550;
+    border: 2px solid black;
+}
+
+.writing{
+    justify-content: center ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 138.9px; 
+    font-size: 57px;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+.tv{
+    margin-top: -10px;
+}
+.more{
+    margin-top: -10px;
+}
+.cancel{
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 15px;
+}
+.ready{
+    font-size: medium;
+    font-weight: 100;
+    margin-top: 33px;
+}
+
+.email{
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+.email_id{
+    background-color: black;
+    border: 1px solid white;
+    padding:20px;
+    width: 350px;
+    border-radius: 5px;
+}
+.get{
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 15px;
+    padding-right: 55px;
+    border-radius: 5px;
+    border: 2px solid black;
+}

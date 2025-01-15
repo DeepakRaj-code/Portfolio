@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(1, 1, 73);
+}
+.head{
+    background-color: blue;
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+hr{
+    width: 1500px;
+}
+.btn{
+    padding: 30px;
+    word-spacing: 30px;
+    margin-left: 20px;
+    display: flex;
+    gap: 50px;
+    color: white;
+}
+.btn1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.deepak{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.btn2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.shrishti{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.home{
+    color: white;
+    display: flex;
+    font-size: 17px;
+    margin-right: 100px;
+}
+.welcome{
+    color: white;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 50px;
+    animation: welcome1 4s alternate;
+}
+.contactus a{
+    text-decoration: none;
+}
+.contactus a:active{
+    color: white;
+}
+.contactus a:visited{
+    color: white;
+}
+.contactus a:hover{
+    color: red;
+}
+
+.main{
+    height: 600px;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+    margin-top: -50px;
+}
+.btn3{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: deep 2s alternate 0s ease-out forwards,
+               raj2 1s alternate 2s ease-in infinite;
+}
+.deepak1{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%; 
+}
+.btn4{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: shri 2s alternate 0s ease-out forwards,
+               raj2 1s alternate 2s ease-in infinite;  
+}
+.shrishti1{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.raj{
+    color: white;
+    margin-left: 90px;
+    margin-top: 50px;
+    font-size: 30px;
+    animation: raj1 2s alternate 0s ease-out forwards;
+}
+.profile{
+    color: white;
+    font-size: 40px;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: raj1 2s alternate 0s ease-out forwards;
+}
+@keyframes deep {
+    from{
+        transform: translateX(-600px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes raj2 {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(15px);
+    }
+}
+@keyframes shri {
+    from{
+        transform: translateX(500px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes raj1 {
+    from{
+        transform: translateY(200px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes welcome1 {
+    from{
+        color: rgb(1, 1, 73);;
+    }
+    to{
+        color: white;
+    }
+}
